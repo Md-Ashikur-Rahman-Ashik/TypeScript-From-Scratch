@@ -1,15 +1,12 @@
-function add(n1, n2, showResult, phrase) {
-    //   console.log(typeof number1);
-    var result = n1 + n2;
-    if (showResult) {
-        console.log(phrase + result);
-    }
-    else {
-        return result;
-    }
-}
-var number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = "Result is: ";
-add(number1, number2, printResult, resultPhrase);
+// const person: {
+//   name: string;
+//   age: number;
+// } = {
+//   name: "Ashikur Rahman",
+//   age: 19,
+// };
+var person = {
+    name: "Ashikur Rahman",
+    age: 19,
+};
+console.log(person.name);
