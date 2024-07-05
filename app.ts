@@ -6,16 +6,29 @@
 //   age: 19,
 // };
 
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
+// const person: {
+//   name: string;
+//   age: number;
+//   hobbies: string[];
+//   role: [number, string];
+// } = {
+//   name: "Ashikur Rahman",
+//   age: 19,
+//   hobbies: ["Sports", "Cooking"],
+//   role: [2, "Author"],
+// };
+
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+}
+
+const person = {
   name: "Ashikur Rahman",
   age: 19,
   hobbies: ["Sports", "Cooking"],
-  role: [2, "Author"],
+  role: Role.ADMIN,
 };
 
 // person.role.push("admin");
@@ -24,8 +37,12 @@ const person: {
 let favoriteActivities: string[];
 favoriteActivities = ["Sports"];
 
-console.log(person.name);
+// console.log(person.name);
 
 for (const hobby of person.hobbies) {
-  console.log(hobby);
+  // console.log(hobby);
+}
+
+if (person.role === Role.AUTHOR) {
+  console.log("is Author");
 }
