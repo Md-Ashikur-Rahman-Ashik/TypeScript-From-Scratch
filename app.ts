@@ -14,5 +14,11 @@
 
 // generateError("An error occurred", 500);
 
-const userName = "Ashikur Rahman Ashik";
-console.log(userName);
+// const userName = "Ashikur Rahman Ashik";
+// console.log(userName);
+
+const button = document.querySelector("button")!;
+
+button.addEventListener("click", () => {
+  console.log("!Clicked");
+});
