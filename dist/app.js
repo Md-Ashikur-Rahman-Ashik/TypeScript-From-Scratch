@@ -13,6 +13,9 @@
 // const userName = "Ashikur Rahman Ashik";
 // console.log(userName);
 const button = document.querySelector("button");
-button.addEventListener("click", () => {
-    console.log("!Clicked");
-});
+function addHandler(message) {
+    console.log("!Clicked" + message);
+}
+if (button) {
+    button.addEventListener("click", addHandler.bind(null, "The desired button"));
+}
