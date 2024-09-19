@@ -26,14 +26,23 @@
 //   console.log("Winter is coming");
 // }
 
-interface Stark {
-  name: String;
-  age?: Number;
-}
+// interface Stark {
+//   name: String;
+//   age?: Number;
+// }
 
-function printName(stark: Stark) {
-  console.log(stark.name);
-}
+// function printName(stark: Stark) {
+//   console.log(stark.name);
+// }
 
-printName({ name: "Ashik" });
+// printName({ name: "Ashik" });
 // printName({ label: "Montu" });
+
+class Stark {
+  name : string;
+  saying: string;
+}
+
+let ned = new Stark();
+
+ned.saying = "Winter is coming"

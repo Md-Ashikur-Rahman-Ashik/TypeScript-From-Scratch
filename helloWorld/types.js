@@ -16,7 +16,18 @@
 // function anotherName(): void {
 //   console.log("Winter is coming");
 // }
-function printName(stark) {
-    console.log(stark.name);
-}
-printName({ name: "Ashik" });
+// interface Stark {
+//   name: String;
+//   age?: Number;
+// }
+// function printName(stark: Stark) {
+//   console.log(stark.name);
+// }
+// printName({ name: "Ashik" });
+// printName({ label: "Montu" });
+var Stark = /** @class */ (function () {
+    function Stark() {
+    }
+    return Stark;
+}());
+var ned = new Stark();
