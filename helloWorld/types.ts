@@ -39,10 +39,24 @@
 // printName({ label: "Montu" });
 
 class Stark {
-  name : string;
+  name: string = "JavaScript";
   saying: string;
+  static castle: string = "Winterfell!";
+
+  constructor() {
+    this.saying = Stark.castle;
+    this.name = "TypeScript";
+  }
+
+  hello(person: string) {
+    console.log("Hello " + person);
+  }
 }
 
 let ned = new Stark();
 
-ned.saying = "Winter is coming"
+ned.saying = "Winter is coming";
+
+// console.log(Stark.castle);
+
+ned.hello("Robert");
