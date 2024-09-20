@@ -1,19 +1,4 @@
 // let n: Number = 1;
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // n = "Robb"
 // let isWinter: boolean = false;
 // isWinter = 123;
@@ -56,28 +41,34 @@ var __extends = (this && this.__extends) || (function () {
 // ned.saying = "Winter is coming";
 // console.log(Stark.castle);
 // ned.hello("Robert");
-var Person = /** @class */ (function () {
-    function Person(name) {
-        this.name = "";
-        this.name = name;
-    }
-    Person.prototype.dance = function () {
-        console.log(this.name + " is dancing");
-    };
-    return Person;
-}());
-var bran = new Person("Bran");
-bran.dance();
-var AwesomePerson = /** @class */ (function (_super) {
-    __extends(AwesomePerson, _super);
-    function AwesomePerson() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    AwesomePerson.prototype.dance = function () {
-        console.log("So Awesome!");
-        _super.prototype.dance.call(this);
-    };
-    return AwesomePerson;
-}(Person));
-var robert = new AwesomePerson("Robert");
-robert.dance();
+// class Person {
+//   name: string = "";
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+//   dance() {
+//     console.log(this.name + " is dancing");
+//   }
+// }
+// let bran = new Person("Bran");
+// bran.dance();
+// class AwesomePerson extends Person {
+//   dance() {
+//     console.log("So Awesome!");
+//     super.dance();
+//   }
+// }
+// let robert = new AwesomePerson("Robert");
+// robert.dance();
+var Utility;
+(function (Utility) {
+    var useful = /** @class */ (function () {
+        function useful() {
+        }
+        useful.prototype.timesTwo = function (n) {
+            return n * 2;
+        };
+        return useful;
+    }());
+    Utility.useful = useful;
+})(Utility || (Utility = {}));
