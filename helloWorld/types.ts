@@ -38,25 +38,29 @@
 // printName({ name: "Ashik" });
 // printName({ label: "Montu" });
 
-class Stark {
-  name: string = "JavaScript";
-  saying: string;
-  static castle: string = "Winterfell!";
+// class Stark {
+//   name: string = "JavaScript";
+//   saying: string;
+//   static castle: string = "Winterfell!";
 
-  constructor() {
-    this.saying = Stark.castle;
-    this.name = "TypeScript";
-  }
+//   constructor() {
+//     this.saying = Stark.castle;
+//     this.name = "TypeScript";
+//   }
 
-  hello(person: string) {
-    console.log("Hello " + person);
-  }
-}
+//   hello(person: string) {
+//     console.log("Hello " + person);
+//   }
+// }
 
-let ned = new Stark();
+// let ned = new Stark();
 
-ned.saying = "Winter is coming";
+// ned.saying = "Winter is coming";
 
 // console.log(Stark.castle);
 
-ned.hello("Robert");
+// ned.hello("Robert");
+
+class Person {
+  name: string = "";
+}
