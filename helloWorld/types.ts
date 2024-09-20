@@ -63,4 +63,23 @@
 
 class Person {
   name: string = "";
+  constructor(name: string) {
+    this.name = name;
+  }
+  dance() {
+    console.log(this.name + " is dancing");
+  }
 }
+
+let bran = new Person("Bran");
+bran.dance();
+
+class AwesomePerson extends Person {
+  dance() {
+    console.log("So Awesome!");
+    super.dance();
+  }
+}
+
+let robert = new AwesomePerson("Robert");
+robert.dance();
